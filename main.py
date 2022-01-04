@@ -37,7 +37,8 @@ def pacman(package):
 def yay(package):
     os.system("yay -S " + package)
 
-user = input("What username should be used? ")
+user = os.getenv("USER")
+home = os.getenv("HOME")
 
 print("\n-- Core")
 if ask_yn("Install git?", True):
@@ -47,6 +48,14 @@ if ask_yn("Install yay (AUR helper)?", True):
 if ask_yn("Swap pacman.conf (enable multilib included)?", True):
     os.system("sudo echo ./pacman.conf > /etc/pacman.conf")
     os.system("sudo pacman -Syu")
+
+print("\n-- Personalize")
+if ask_yn("Swap .bashrc?", True):
+    old_bashrc = open(home + "/.bashrc", "w")
+    bashrc = open("bashrc", "r")
+    old_bashrc.write(bashrc.read())
+    old_bashrc.close()
+    bashrc.close()
 
 print("\n-- Utilities")
 if ask_yn("Install Chromium?", True):
