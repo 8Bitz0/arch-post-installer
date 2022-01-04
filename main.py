@@ -31,7 +31,6 @@ if ask_yn("Auto mode?", True):
     def ask_yn(text, recommended):
         return recommended
 
-
 def pacman(package):
     os.system("sudo pacman -S " + package)
 
