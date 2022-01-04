@@ -2,17 +2,17 @@
 
 def ask_yn(text, recommended):
     if recommended == True:
-        possible_answers = " [Y/n]"
+        possible_answers = " [Y/n]: "
 
     elif recommended == False:
-        possible_answers = " [y/N]"
+        possible_answers = " [y/N]: "
 
     while True:
         answer = input(text + possible_answers)
-        if answer == "y" or "Y":
+        if answer == "y" or answer == "Y":
             return True
 
-        elif answer == "n" or "N":
+        elif answer == "n" or answer == "N":
             return False
 
         elif answer == "":
