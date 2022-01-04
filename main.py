@@ -1,5 +1,7 @@
 #!/usr/env python3
 
+import os
+
 def ask_yn(text, recommended):
     if recommended == True:
         possible_answers = " [Y/n]: "
@@ -24,3 +26,9 @@ def ask_yn(text, recommended):
 
         else:
             print("Invalid input!")
+
+def pacman(package):
+    os.system("sudo pacman -S " + package)
+
+def yay(package):
+    os.system("yay -S " + package)
