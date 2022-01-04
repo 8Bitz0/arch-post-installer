@@ -27,12 +27,16 @@ def ask_yn(text, recommended):
         else:
             print("Invalid input!")
 
+if ask_yn("Auto mode?", True):
+    def ask_yn(text, recommended):
+        return recommended
+
+
 def pacman(package):
     os.system("sudo pacman -S " + package)
 
 def yay(package):
     os.system("yay -S " + package)
-
 
 user = input("What username should be used? ")
 
