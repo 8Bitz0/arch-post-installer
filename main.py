@@ -67,6 +67,7 @@ print("\n-- Chat")
 if ask_yn("Install Discord with dvm (Discord Version Manager)? ", True):
     os.system("wget https://github.com/diced/dvm/releases/download/1.1.7/dvm-x86_64-unknown-linux-gnu")
     os.system("sudo mv dvm-x86_64-unknown-linux-gnu /bin/dvm")
+    os.system("sudo chmod +x /bin/dvm")
     os.system("/bin/dvm install stable")
 
 print("\n-- Games")
