@@ -43,6 +43,8 @@ home = os.getenv("HOME")
 print("\n-- Core")
 if ask_yn("Install git?", True):
     pacman("git")
+if ask_yn("Install fuse?", True):
+    pacman("fuse")
 if ask_yn("Install yay (AUR helper)?", True):
     os.system("cd /opt; sudo git clone https://aur.archlinux.org/yay-git.git; sudo chown -R " + user + ":" + user + " ./yay-git; cd yay-git; makepkg -si")
 if ask_yn("Swap pacman.conf (enable multilib included)?", True):
