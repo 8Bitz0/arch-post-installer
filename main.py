@@ -50,6 +50,10 @@ if ask_yn("Install yay (AUR helper)?", True):
 if ask_yn("Swap pacman.conf (enable multilib included)?", True):
     os.system("sudo echo ./pacman.conf > /etc/pacman.conf")
     os.system("sudo pacman -Syu")
+if ask_yn("Install proprietary AMD Radeon drivers?", True):
+    yay("vulkan-amdgpu-pro")
+    yay("amdgpu-pro-libgl")
+    yay("opencl-amd")
 
 print("\n-- Personalize")
 if ask_yn("Swap .bashrc?", True):
