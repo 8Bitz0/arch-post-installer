@@ -49,7 +49,7 @@ if ask_yn("Install yay (AUR helper)?", True):
     os.system("cd /opt; sudo git clone https://aur.archlinux.org/yay-git.git; sudo chown -R " + user + ":" + user + " ./yay-git; cd yay-git; makepkg -si")
 if ask_yn("Swap pacman.conf (enable multilib included)?", True):
     os.system("sudo cat ./pacman.conf > /etc/pacman.conf")
-    os.system("sudo pacman -Syu")
+    os.system("sudo pacman -Syyu")
 if ask_yn("Install proprietary AMD Radeon drivers?", True):
     yay("vulkan-amdgpu-pro")
     yay("amdgpu-pro-libgl")
