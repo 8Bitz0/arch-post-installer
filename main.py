@@ -64,8 +64,8 @@ if ask_yn("Swap .bashrc?", True):
     bashrc.close()
 
 print("\n-- Utilities")
-if ask_yn("Install Chromium?", True):
-    pacman("chromium")
+if ask_yn("Install Librewolf?", True):
+    yay("librewolf-bin")
 if ask_yn("Install Bitwarden?", True):
     pacman("bitwarden")
 
