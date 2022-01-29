@@ -57,11 +57,7 @@ if ask_yn("Install proprietary AMD Radeon drivers?", True):
 
 print("\n-- Personalize")
 if ask_yn("Swap .bashrc?", True):
-    old_bashrc = open(home + "/.bashrc", "w")
-    bashrc = open("bashrc", "r")
-    old_bashrc.write(bashrc.read())
-    old_bashrc.close()
-    bashrc.close()
+    os.system("cat ./bashrc > $HOME/.bashrc")
 
 print("\n-- Utilities")
 if ask_yn("Install Librewolf?", True):
