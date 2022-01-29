@@ -60,7 +60,6 @@ if ask_yn("Swap .bashrc?", True):
     os.system("cat ./bashrc > $HOME/.bashrc")
 if ask_yn("Configure i3?", True):
     os.system("cat i3config > $HOME/.config/i3/config")
-    os.system("cat xinitrc > $HOME/.xinitrc")
     os.system("cat fehbg $HOME/.fehbg")
 
 print("\n-- Utilities")
