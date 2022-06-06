@@ -11,6 +11,6 @@ rm -f ~/.bash_history
 alias ls='ls --color=auto'
 alias cls='clear'
 
-echo 
+PS1='\e[36;1m\u\e[0m@\e[36;1m\h\e[0m \W> '
 
-PS1='\e[31;1m\u\e[0m@\e[31;1m\h\e[0m \W> '
+PATH='/home/alex/.local/bin':$PATH
